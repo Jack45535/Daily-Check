@@ -1,0 +1,33 @@
+C:\Users\Jack\Desktop\calender app\bin\Debug\netcoreapp2.2\calender app.deps.json
+C:\Users\Jack\Desktop\calender app\bin\Debug\netcoreapp2.2\calender app.runtimeconfig.json
+C:\Users\Jack\Desktop\calender app\bin\Debug\netcoreapp2.2\calender app.runtimeconfig.dev.json
+c:\Users\Jack\Desktop\calender app\bin\Debug\netcoreapp2.2\calender app.dll
+c:\Users\Jack\Desktop\calender app\bin\Debug\netcoreapp2.2\calender app.pdb
+c:\Users\Jack\Desktop\calender app\obj\Debug\netcoreapp2.2\calender app.csprojAssemblyReference.cache
+c:\Users\Jack\Desktop\calender app\obj\Debug\netcoreapp2.2\calender app.csproj.CoreCompileInputs.cache
+c:\Users\Jack\Desktop\calender app\obj\Debug\netcoreapp2.2\calender app.AssemblyInfoInputs.cache
+c:\Users\Jack\Desktop\calender app\obj\Debug\netcoreapp2.2\calender app.AssemblyInfo.cs
+c:\Users\Jack\Desktop\calender app\obj\Debug\netcoreapp2.2\calender app.dll
+c:\Users\Jack\Desktop\calender app\obj\Debug\netcoreapp2.2\calender app.pdb
+C:\Users\jacke\Desktop\calender app\bin\Debug\netcoreapp2.2\calender app.deps.json
+C:\Users\jacke\Desktop\calender app\bin\Debug\netcoreapp2.2\calender app.runtimeconfig.json
+C:\Users\jacke\Desktop\calender app\bin\Debug\netcoreapp2.2\calender app.runtimeconfig.dev.json
+C:\Users\jacke\Desktop\calender app\bin\Debug\netcoreapp2.2\calender app.dll
+C:\Users\jacke\Desktop\calender app\bin\Debug\netcoreapp2.2\calender app.pdb
+C:\Users\jacke\Desktop\calender app\obj\Debug\netcoreapp2.2\calender app.csprojAssemblyReference.cache
+C:\Users\jacke\Desktop\calender app\obj\Debug\netcoreapp2.2\calender app.csproj.CoreCompileInputs.cache
+C:\Users\jacke\Desktop\calender app\obj\Debug\netcoreapp2.2\calender app.AssemblyInfoInputs.cache
+C:\Users\jacke\Desktop\calender app\obj\Debug\netcoreapp2.2\calender app.AssemblyInfo.cs
+C:\Users\jacke\Desktop\calender app\obj\Debug\netcoreapp2.2\calender app.dll
+C:\Users\jacke\Desktop\calender app\obj\Debug\netcoreapp2.2\calender app.pdb
+C:\Users\jacke\Desktop\testca\bin\Debug\netcoreapp2.2\calender app.deps.json
+C:\Users\jacke\Desktop\testca\bin\Debug\netcoreapp2.2\calender app.runtimeconfig.json
+C:\Users\jacke\Desktop\testca\bin\Debug\netcoreapp2.2\calender app.runtimeconfig.dev.json
+C:\Users\jacke\Desktop\testca\bin\Debug\netcoreapp2.2\calender app.dll
+C:\Users\jacke\Desktop\testca\bin\Debug\netcoreapp2.2\calender app.pdb
+C:\Users\jacke\Desktop\testca\obj\Debug\netcoreapp2.2\calender app.csprojAssemblyReference.cache
+C:\Users\jacke\Desktop\testca\obj\Debug\netcoreapp2.2\calender app.csproj.CoreCompileInputs.cache
+C:\Users\jacke\Desktop\testca\obj\Debug\netcoreapp2.2\calender app.AssemblyInfoInputs.cache
+C:\Users\jacke\Desktop\testca\obj\Debug\netcoreapp2.2\calender app.AssemblyInfo.cs
+C:\Users\jacke\Desktop\testca\obj\Debug\netcoreapp2.2\calender app.dll
+C:\Users\jacke\Desktop\testca\obj\Debug\netcoreapp2.2\calender app.pdb
