@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jacke\\Desktop\\testca\\calender app.csproj",
+      "projectUniqueName": "C:\\Users\\jacke\\Desktop\\Daily-Check\\testca\\calender app.csproj",
       "projectName": "calender app",
-      "projectPath": "C:\\Users\\jacke\\Desktop\\testca\\calender app.csproj",
+      "projectPath": "C:\\Users\\jacke\\Desktop\\Daily-Check\\testca\\calender app.csproj",
       "packagesPath": "C:\\Users\\jacke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jacke\\Desktop\\testca\\obj\\",
+      "outputPath": "C:\\Users\\jacke\\Desktop\\Daily-Check\\testca\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

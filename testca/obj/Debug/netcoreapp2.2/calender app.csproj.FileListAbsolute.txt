@@ -31,3 +31,14 @@ C:\Users\jacke\Desktop\testca\obj\Debug\netcoreapp2.2\calender app.AssemblyInfoI
 C:\Users\jacke\Desktop\testca\obj\Debug\netcoreapp2.2\calender app.AssemblyInfo.cs
 C:\Users\jacke\Desktop\testca\obj\Debug\netcoreapp2.2\calender app.dll
 C:\Users\jacke\Desktop\testca\obj\Debug\netcoreapp2.2\calender app.pdb
+C:\Users\jacke\Desktop\Daily-Check\testca\bin\Debug\netcoreapp2.2\calender app.deps.json
+C:\Users\jacke\Desktop\Daily-Check\testca\bin\Debug\netcoreapp2.2\calender app.runtimeconfig.json
+C:\Users\jacke\Desktop\Daily-Check\testca\bin\Debug\netcoreapp2.2\calender app.runtimeconfig.dev.json
+C:\Users\jacke\Desktop\Daily-Check\testca\bin\Debug\netcoreapp2.2\calender app.dll
+C:\Users\jacke\Desktop\Daily-Check\testca\bin\Debug\netcoreapp2.2\calender app.pdb
+C:\Users\jacke\Desktop\Daily-Check\testca\obj\Debug\netcoreapp2.2\calender app.csprojAssemblyReference.cache
+C:\Users\jacke\Desktop\Daily-Check\testca\obj\Debug\netcoreapp2.2\calender app.csproj.CoreCompileInputs.cache
+C:\Users\jacke\Desktop\Daily-Check\testca\obj\Debug\netcoreapp2.2\calender app.AssemblyInfoInputs.cache
+C:\Users\jacke\Desktop\Daily-Check\testca\obj\Debug\netcoreapp2.2\calender app.AssemblyInfo.cs
+C:\Users\jacke\Desktop\Daily-Check\testca\obj\Debug\netcoreapp2.2\calender app.dll
+C:\Users\jacke\Desktop\Daily-Check\testca\obj\Debug\netcoreapp2.2\calender app.pdb
