@@ -20,10 +20,9 @@ namespace calender_app
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("------------------------------------------------------------------");
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("HOMEPAGE");
+                    Console.WriteLine("                          HOMEPAGE");
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("------------------------------------------------------------------");
-                    Console.ForegroundColor = ConsoleColor.Green;
                     Categories.Add("Coding");
                     Categories.Add("Reading");
                     Categories.Add("Vocabulary");
@@ -33,7 +32,10 @@ namespace calender_app
                     
                     foreach (string Category in Categories)
                     {
-                        Console.WriteLine(NumberID + ": " + Category);
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.Write(NumberID + ": ");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine(Category);
                         NumberID += 1;
                     
                     }
@@ -54,11 +56,14 @@ namespace calender_app
                         Project.Add("Underworld RPG");
                         Project.Add("Underworld RPG website");
                         Project.Add("Back");
-                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        
 
                         foreach (string Category in Project)
                         {
-                            Console.WriteLine(ProjectIDNumber + ": " + Category);
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            Console.Write(ProjectIDNumber + ": ");
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            Console.WriteLine(Category);
                             ProjectIDNumber += 1;
                         }
                         Console.ForegroundColor = ConsoleColor.White;
@@ -83,11 +88,14 @@ namespace calender_app
                             ReadingMaterial.Add("Tech");
                             ReadingMaterial.Add("Leisure");
                             ReadingMaterial.Add("Back");
-                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            
 
                                 foreach (string Category in ReadingMaterial)
                                 {
-                                    Console.WriteLine(ReadingMaterialNumberID + ": " + Category);
+                                    Console.ForegroundColor = ConsoleColor.Gray;
+                                    Console.Write(ReadingMaterialNumberID + ": ");
+                                    Console.ForegroundColor = ConsoleColor.Cyan;
+                                    Console.WriteLine(Category);
                                     ReadingMaterialNumberID += 1;
                                 }
                             
@@ -109,12 +117,15 @@ namespace calender_app
                                 TechBooksAndArticles.Add("New Book/Article");
                                 TechBooksAndArticles.Add("Back");
                                 TechBooksAndArticles.Add("Home");
-                                Console.ForegroundColor = ConsoleColor.Blue;
+                                
 
 
                                 foreach (string Category in TechBooksAndArticles)
                                 {
-                                    Console.WriteLine(TechBooksAndArticlesIDNumber + ": " + Category);
+                                    Console.ForegroundColor = ConsoleColor.Gray;
+                                    Console.Write(TechBooksAndArticlesIDNumber + ": ");
+                                    Console.ForegroundColor = ConsoleColor.Blue;
+                                    Console.WriteLine(Category);
                                     TechBooksAndArticlesIDNumber += 1;
                                 }
 
@@ -146,11 +157,14 @@ namespace calender_app
                                 CasualReading.Add("New Book/Article");
                                 CasualReading.Add("Back");
                                 CasualReading.Add("Home");
-                                Console.ForegroundColor = ConsoleColor.Blue;
+                                
 
                                 foreach (string Category in CasualReading)
                                 {
-                                    Console.WriteLine(CasualReadingIDNumber + ": " + Category);
+                                    Console.ForegroundColor = ConsoleColor.Gray;
+                                    Console.Write(CasualReadingIDNumber + ": ");
+                                    Console.ForegroundColor = ConsoleColor.Blue;
+                                    Console.WriteLine(Category);
                                     CasualReadingIDNumber =+ 1;
                                 }
                                 Console.ForegroundColor = ConsoleColor.White;
@@ -173,11 +187,14 @@ namespace calender_app
                         Vocab.Add("English");
                         Vocab.Add("Other Langueges"); 
                         Vocab.Add("Back");
-                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        
 
                         foreach (string Category in Vocab)
                         {
-                            Console.WriteLine(VocabIDNumber + ": " + Category);
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            Console.Write(VocabIDNumber + ": ");
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            Console.WriteLine(Category);
                             VocabIDNumber += 1;
                         }
                         Console.ForegroundColor = ConsoleColor.White;
@@ -207,11 +224,14 @@ namespace calender_app
                         Workout.Add("Gym");
                         Workout.Add("Walking home from the bar while hammered");
                         Workout.Add("Back");
-                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        
 
                         foreach (string Category in Workout)
                         {
-                            Console.WriteLine(WorkoutNumberID+ ": " + Category);
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            Console.Write(WorkoutNumberID+ ": ");
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            Console.WriteLine(Category);
                             WorkoutNumberID +=1 ;
                         }
                         Console.ForegroundColor = ConsoleColor.White;
@@ -234,11 +254,14 @@ namespace calender_app
                         Jobs.Add("Runner");
                         Jobs.Add("Intern at KC");
                         Jobs.Add("Back");
-                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        
 
                         foreach (string Category in Jobs)
                         {
-                            Console.WriteLine(JobNumberID + ": " + Category);
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            Console.Write(JobNumberID + ": ");
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            Console.WriteLine(Category);
                             JobNumberID += 1;
                         }
                         Console.ForegroundColor = ConsoleColor.White;
@@ -264,11 +287,14 @@ namespace calender_app
                         StatCategories.Add("Type of Workout");
                         StatCategories.Add("Job");
                         StatCategories.Add("Back");
-                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        
 
                         foreach (string Category in StatCategories)
                         {
-                            Console.WriteLine(StatNumberID + ": " + Category);
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            Console.Write(StatNumberID + ": ");
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            Console.WriteLine(Category);
                             StatNumberID += 1;
                         }
                         Console.ForegroundColor = ConsoleColor.White;
@@ -279,7 +305,7 @@ namespace calender_app
                         if (StatNumberSelected ==7)
                         {
                             Console.WriteLine("Going Back!");
-                            i=i-1;
+                            i=0;
                         }
                     }
                     
