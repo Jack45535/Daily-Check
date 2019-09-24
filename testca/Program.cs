@@ -1,12 +1,82 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
 namespace calender_app
 {
     class Program
     {
+        public void Rainbow()
+        {
+            int x = 1;
+            if (x ==1)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                x+=1;
+            }
+
+            if (x==2)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                x+=1;
+            }
+
+            if (x==3)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                x+=1;
+            }
+
+            if(x==4)
+            {
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                x+=1;
+
+            }
+            
+            if(x==5)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                x+=1;
+            }
+
+            if (x==6)
+            {
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                x+=1;
+
+            }
+
+            if (x==7)
+            {
+                Console.ForegroundColor = ConsoleColor.Gray;
+                x+=1;
+            }
+
+            if(x==8)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                x+=1;
+            }
+        }
+        public void GetDate()
+        {
+            Program p = new Program();
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            var dateAndTime = DateTime.Now;
+            var date = dateAndTime.Date;
+            Console.ForegroundColor = ConsoleColor.White;
+            p.Rainbow();
+            Console.WriteLine("_");
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.Write(date.ToString("MM/dd/yyyy"));
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("                                                        |");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
         static void Main(string[] args)
         {
+            Program p = new Program();
             int i = 0;
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
@@ -17,7 +87,7 @@ namespace calender_app
                     int NumberSelected;
                     List<string> Categories = new List<string>();
                     int NumberID = 1;
-                    Console.ForegroundColor = ConsoleColor.White;
+                    p.GetDate(); 
                     Console.WriteLine("------------------------------------------------------------------");
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("                          HOMEPAGE");
@@ -45,6 +115,7 @@ namespace calender_app
                     
                 if (NumberSelected == 1)
                     {
+                        p.GetDate();
                         Console.WriteLine("------------------------------------------------------------------");
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("Welcome to the Coding page!");
@@ -76,6 +147,7 @@ namespace calender_app
                     {
                         do 
                         {
+                            p.GetDate();
                             
                             i = 3;
                             Console.WriteLine("------------------------------------------------------------------");
@@ -107,6 +179,7 @@ namespace calender_app
                             
                             if (ReadingNumberSelected == 1)
                             {
+                                p.GetDate();
                                 Console.WriteLine("------------------------------------------------------------------");
                                 Console.ForegroundColor = ConsoleColor.Magenta;
                                 Console.WriteLine("Tech Books/Articles");
@@ -147,6 +220,7 @@ namespace calender_app
                         
                         if (ReadingNumberSelected == 2)
                             {
+                                p.GetDate();
                                 Console.WriteLine("------------------------------------------------------------------");
                                 Console.ForegroundColor = ConsoleColor.Magenta;
                                 Console.WriteLine("Casual Reading");
@@ -175,6 +249,7 @@ namespace calender_app
         
                 if (NumberSelected == 3)
                     { 
+                        p.GetDate();
                         Console.WriteLine("------------------------------------------------------------------");
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("Welcome to the Vocabulary page!");
@@ -210,6 +285,7 @@ namespace calender_app
         
                 if (NumberSelected == 4)
                     {
+                        p.GetDate();
                         Console.WriteLine("------------------------------------------------------------------");
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("Welcome to the Exercise page!");
@@ -242,6 +318,7 @@ namespace calender_app
         
                 if (NumberSelected == 5)
                     {
+                        p.GetDate();
                         Console.WriteLine("------------------------------------------------------------------");
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("Welcome to the Work page!");
@@ -273,6 +350,7 @@ namespace calender_app
         
                 if (NumberSelected == 6)
                     {
+                        p.GetDate();
                         Console.WriteLine("------------------------------------------------------------------");
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("Welcome to the Stat page!");
@@ -313,6 +391,8 @@ namespace calender_app
             while(i<3);
             Console.ResetColor();
             Console.Clear();
+        
         }
+
     }
 }
