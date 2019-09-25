@@ -6,58 +6,60 @@ namespace calender_app
 {
     class Program
     {
+        int x = 1;
+
         public void Rainbow()
         {
-            int x = 1;
             if (x ==1)
             {
                 Console.ForegroundColor = ConsoleColor.White;
-                x+=1;
+                
             }
 
             if (x==2)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                x+=1;
+                
             }
 
             if (x==3)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                x+=1;
+                
             }
 
             if(x==4)
             {
                 Console.ForegroundColor = ConsoleColor.Magenta;
-                x+=1;
+                
 
             }
             
             if(x==5)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                x+=1;
+                
             }
 
             if (x==6)
             {
                 Console.ForegroundColor = ConsoleColor.Cyan;
-                x+=1;
+                
 
             }
 
             if (x==7)
             {
                 Console.ForegroundColor = ConsoleColor.Gray;
-                x+=1;
+                
             }
 
             if(x==8)
             {
                 Console.ForegroundColor = ConsoleColor.Blue;
-                x+=1;
+                x-=8;
             }
+            x+=1;
         }
         public void GetDate()
         {
@@ -66,13 +68,23 @@ namespace calender_app
             var dateAndTime = DateTime.Now;
             var date = dateAndTime.Date;
             Console.ForegroundColor = ConsoleColor.White;
+            int RainbowClock = 0;
+            do
+            {
+                p.Rainbow();
+                Console.Write("_");
+                RainbowClock+=1;
+            }
+            while(RainbowClock<66);
             p.Rainbow();
-            Console.WriteLine("_");
+            Console.WriteLine("O");
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.Write(date.ToString("MM/dd/yyyy"));
             Console.ForegroundColor = ConsoleColor.White;
+            p.Rainbow();
             Console.WriteLine("                                                        |");
             Console.ForegroundColor = ConsoleColor.White;
+            
         }
         static void Main(string[] args)
         {
@@ -88,11 +100,17 @@ namespace calender_app
                     List<string> Categories = new List<string>();
                     int NumberID = 1;
                     p.GetDate(); 
-                    Console.WriteLine("------------------------------------------------------------------");
+                    Console.Write("------------------------------------------------------------------");
+                    p.Rainbow();
+                    Console.WriteLine("|");
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("                          HOMEPAGE");
+                    Console.Write("                          HOMEPAGE                                ");
+                    p.Rainbow();
+                    Console.WriteLine("|");
                     Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("------------------------------------------------------------------");
+                    Console.Write("------------------------------------------------------------------");
+                    p.Rainbow();
+                    Console.WriteLine("|");
                     Categories.Add("Coding");
                     Categories.Add("Reading");
                     Categories.Add("Vocabulary");
@@ -105,22 +123,37 @@ namespace calender_app
                         Console.ForegroundColor = ConsoleColor.Gray;
                         Console.Write(NumberID + ": ");
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine(Category);
+                        Console.Write(Category);
                         NumberID += 1;
+                        int characterlength = Category.Length; 
+                        do
+                        {
+                            Console.Write(" ");
+                            characterlength +=1;
+                        }
+                        while(characterlength<63);
+                        p.Rainbow();
+                        Console.WriteLine("|");
                     
                     }
                     Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("Choose a Category:");
+                    Console.WriteLine("Pick a field!");
                     NumberSelected = Convert.ToInt32(Console.ReadLine());
                     
                 if (NumberSelected == 1)
                     {
                         p.GetDate();
-                        Console.WriteLine("------------------------------------------------------------------");
+                        Console.Write("------------------------------------------------------------------");
+                        p.Rainbow();
+                        Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("Welcome to the Coding page!");
+                        Console.Write("                    Welcome to the Coding page!                   ");
+                        p.Rainbow();
+                        Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("------------------------------------------------------------------");
+                        Console.Write("------------------------------------------------------------------");
+                        p.Rainbow();
+                        Console.WriteLine("|");
                         List<string> Project = new List<string>();
                         int ProjectIDNumber = 1;
                         Project.Add("Calender app");
@@ -130,18 +163,27 @@ namespace calender_app
                         
 
                         foreach (string Category in Project)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Gray;
-                            Console.Write(ProjectIDNumber + ": ");
-                            Console.ForegroundColor = ConsoleColor.Cyan;
-                            Console.WriteLine(Category);
-                            ProjectIDNumber += 1;
-                        }
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Choose a Category:");
-                        int ProjectNumberSelected;
-                        ProjectNumberSelected = Convert.ToInt32(Console.ReadLine());
-                    }
+                            {
+                                Console.ForegroundColor = ConsoleColor.Gray;
+                                Console.Write(ProjectIDNumber + ": ");
+                                Console.ForegroundColor = ConsoleColor.Cyan;
+                                Console.Write(Category);
+                                ProjectIDNumber += 1;
+                                int characterlength = Category.Length; 
+                                do
+                                {
+                                    Console.Write(" ");
+                                    characterlength +=1;
+                                }
+                                while(characterlength<63);
+                                p.Rainbow();
+                                Console.WriteLine("|");
+                                }
+                                Console.ForegroundColor = ConsoleColor.White;
+                                Console.WriteLine("Pick a field!");
+                                int ProjectNumberSelected;
+                                ProjectNumberSelected = Convert.ToInt32(Console.ReadLine());
+                            }
         
                 if (NumberSelected == 2)
                     {
@@ -150,11 +192,17 @@ namespace calender_app
                             p.GetDate();
                             
                             i = 3;
-                            Console.WriteLine("------------------------------------------------------------------");
+                            Console.Write("------------------------------------------------------------------");
+                            p.Rainbow();
+                            Console.WriteLine("|");
                             Console.ForegroundColor = ConsoleColor.Yellow;
-                            Console.WriteLine("Welcome to the Reading page!");
+                            Console.Write("                  Welcome to the Reading page!                    ");
+                            p.Rainbow();
+                            Console.WriteLine("|");
                             Console.ForegroundColor = ConsoleColor.White;
-                            Console.WriteLine("------------------------------------------------------------------");
+                            Console.Write("------------------------------------------------------------------");
+                            p.Rainbow();
+                            Console.WriteLine("|");
                             List<string> ReadingMaterial = new List<string>();
                             int ReadingMaterialNumberID = 1;
                             ReadingMaterial.Add("Tech");
@@ -173,18 +221,24 @@ namespace calender_app
                             
                             
                             Console.ForegroundColor = ConsoleColor.White;
-                            Console.WriteLine("Choose a Category:");
+                            Console.WriteLine("Pick a field!");
                             int ReadingNumberSelected;
                             ReadingNumberSelected = Convert.ToInt32(Console.ReadLine());
                             
                             if (ReadingNumberSelected == 1)
                             {
                                 p.GetDate();
-                                Console.WriteLine("------------------------------------------------------------------");
+                                Console.Write("------------------------------------------------------------------");
+                                p.Rainbow();
+                                Console.WriteLine("|");
                                 Console.ForegroundColor = ConsoleColor.Magenta;
-                                Console.WriteLine("Tech Books/Articles");
+                                Console.Write("                       Tech Books/Articles                        ");
+                                p.Rainbow();
+                                Console.WriteLine("|");
                                 Console.ForegroundColor = ConsoleColor.White;
-                                Console.WriteLine("------------------------------------------------------------------");
+                                Console.Write("------------------------------------------------------------------");
+                                p.Rainbow();
+                                Console.WriteLine("|");
                                 List<string> TechBooksAndArticles = new List<string>();
                                 int TechBooksAndArticlesIDNumber = 1;
                                 TechBooksAndArticles.Add("New Book/Article");
@@ -203,7 +257,7 @@ namespace calender_app
                                 }
 
                                 Console.ForegroundColor = ConsoleColor.White;
-                                Console.WriteLine("Choose a Category:");
+                                Console.WriteLine("Pick a field!");
                                 int TechBooksAndArticlesNumberSelected;
                                 TechBooksAndArticlesNumberSelected = Convert.ToInt32(Console.ReadLine());
 
@@ -221,11 +275,17 @@ namespace calender_app
                         if (ReadingNumberSelected == 2)
                             {
                                 p.GetDate();
-                                Console.WriteLine("------------------------------------------------------------------");
+                                Console.Write("------------------------------------------------------------------");
+                                p.Rainbow();
+                                Console.WriteLine("|");
                                 Console.ForegroundColor = ConsoleColor.Magenta;
-                                Console.WriteLine("Casual Reading");
+                                Console.Write("                           Casual Reading                         ");
+                                p.Rainbow();
+                                Console.WriteLine("|");
                                 Console.ForegroundColor = ConsoleColor.White;
-                                Console.WriteLine("------------------------------------------------------------------");
+                                Console.Write("------------------------------------------------------------------");
+                                p.Rainbow();
+                                Console.WriteLine("|");
                                 List<string> CasualReading = new List<string>();
                                 int CasualReadingIDNumber = 1;
                                 CasualReading.Add("New Book/Article");
@@ -250,11 +310,17 @@ namespace calender_app
                 if (NumberSelected == 3)
                     { 
                         p.GetDate();
-                        Console.WriteLine("------------------------------------------------------------------");
+                        Console.Write("------------------------------------------------------------------");
+                        p.Rainbow();
+                        Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("Welcome to the Vocabulary page!");
+                        Console.Write("                Welcome to the Vocabulary page!                   ");
+                        p.Rainbow();
+                        Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("------------------------------------------------------------------");
+                        Console.Write("------------------------------------------------------------------");
+                        p.Rainbow();
+                        Console.WriteLine("|");
                         List<string> Vocab = new List<string>();
                         int VocabIDNumber = 1;
                         Vocab.Add("Tech Jargon");
@@ -273,7 +339,7 @@ namespace calender_app
                             VocabIDNumber += 1;
                         }
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Choose a Category:");
+                        Console.WriteLine("Pick a field!");
                         int VocabNumberSelected;
                         VocabNumberSelected = Convert.ToInt32(Console.ReadLine());    
 
@@ -286,11 +352,17 @@ namespace calender_app
                 if (NumberSelected == 4)
                     {
                         p.GetDate();
-                        Console.WriteLine("------------------------------------------------------------------");
+                        Console.Write("------------------------------------------------------------------");
+                        p.Rainbow();
+                        Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("Welcome to the Exercise page!");
+                        Console.Write("                 Welcome to the Exercise page!                    ");
+                        p.Rainbow();
+                        Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("------------------------------------------------------------------");
+                        Console.Write("------------------------------------------------------------------");
+                        p.Rainbow();
+                        Console.WriteLine("|");
                         List<string> Workout = new List<string>();
                         int WorkoutNumberID = 1;
                         Workout.Add("Running");
@@ -311,7 +383,7 @@ namespace calender_app
                             WorkoutNumberID +=1 ;
                         }
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Choose a Category:");
+                        Console.WriteLine("Pick a field!");
                         int WorkoutNumberSelected;
                         WorkoutNumberSelected = Convert.ToInt32(Console.ReadLine());
                     }
@@ -319,11 +391,17 @@ namespace calender_app
                 if (NumberSelected == 5)
                     {
                         p.GetDate();
-                        Console.WriteLine("------------------------------------------------------------------");
+                        Console.Write("------------------------------------------------------------------");
+                        p.Rainbow();
+                        Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("Welcome to the Work page!");
+                        Console.Write("                     Welcome to the Work page!                    ");
+                        p.Rainbow();
+                        Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("------------------------------------------------------------------");
+                        Console.Write("------------------------------------------------------------------");
+                        p.Rainbow();
+                        Console.WriteLine("|");
                         List<string> Jobs = new List<string>();
                         int JobNumberID = 1;
                         Jobs.Add("Waiter");
@@ -342,7 +420,7 @@ namespace calender_app
                             JobNumberID += 1;
                         }
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Choose a Category:");
+                        Console.WriteLine("Pick a field!");
                         int JobNumberSelected;
                         JobNumberSelected = Convert.ToInt32(Console.ReadLine());
                         
@@ -351,11 +429,17 @@ namespace calender_app
                 if (NumberSelected == 6)
                     {
                         p.GetDate();
-                        Console.WriteLine("------------------------------------------------------------------");
+                        Console.Write("------------------------------------------------------------------");
+                        p.Rainbow();
+                        Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("Welcome to the Stat page!");
+                        Console.Write("                 Welcome to the Stat page!                        ");
+                        p.Rainbow();
+                        Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("------------------------------------------------------------------");
+                        Console.Write("------------------------------------------------------------------");
+                        p.Rainbow();
+                        Console.WriteLine("|");
                         List<string> StatCategories = new List<string>();
                         int StatNumberID = 1;
                         StatCategories.Add("Breakdowns");
@@ -376,7 +460,7 @@ namespace calender_app
                             StatNumberID += 1;
                         }
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Choose a Category:");
+                        Console.WriteLine("Pick a field!");
                         int StatNumberSelected;
                         StatNumberSelected = Convert.ToInt32(Console.ReadLine());
 
@@ -391,6 +475,8 @@ namespace calender_app
             while(i<3);
             Console.ResetColor();
             Console.Clear();
+
+            
         
         }
 
