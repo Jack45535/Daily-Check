@@ -6,8 +6,7 @@ namespace calender_app
 {
     class Program
     {
-        // int i = 0;
-        // int x = 1;
+        private static int x;
 
         static void Main(string[] args)
         {
@@ -15,364 +14,341 @@ namespace calender_app
             int NumberSelected = 0;
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Clear();
-            
-            // do
-            //     {
-                    
-                    HomePage();
-                    NumberSelected = HomePage();
-                    
-                    
-                if (NumberSelected == 1)
-                    {
+            Console.Clear();   
+            NumberSelected = HomePage();     
+            if (NumberSelected == 1)
+                {
+                    GetDate();
+                    Console.Write("----------------------------------------------------------------");
+                    Rainbow();
+                    Console.WriteLine("|");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write("                    Welcome to the Coding page!                   ");
+                    Rainbow();
+                    Console.WriteLine("|");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.Write("----------------------------------------------------------------");
+                    Rainbow();
+                    Console.WriteLine("|");
+                    List<string> Project = new List<string>();
+                    int ProjectIDNumber = 1;
+                    Project.Add("Calender app");
+                    Project.Add("Underworld RPG");
+                    Project.Add("Underworld RPG website");
+                    Project.Add("Back");
+                        
+
+                    foreach (string Category in Project)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            Console.Write(ProjectIDNumber + ": ");
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            Console.Write(Category);
+                            ProjectIDNumber += 1;
+                            int characterlength = Category.Length; 
+                            do
+                            {
+                                Console.Write(" ");
+                                characterlength +=1;
+                            }
+                            while(characterlength<63);
+                            Rainbow();
+                            Console.WriteLine("|");
+                            }
+                            Console.ForegroundColor = ConsoleColor.White;
+                            int ProjectNumberSelected;
+                            int RainbowClock = 0;
+                            do
+                            {
+                                Rainbow();
+                                Console.Write("_");
+                                RainbowClock+=1;
+                            }
+                            while(RainbowClock<66);
+                            Rainbow();
+                            Console.WriteLine("|");
+                            ProjectNumberSelected = Convert.ToInt32(Console.ReadLine());
+                        }
+        
+            if (NumberSelected == 2)
+                {
                         GetDate();
                         Console.Write("----------------------------------------------------------------");
                         Rainbow();
                         Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.Write("                    Welcome to the Coding page!                   ");
+                        Console.Write("                  Welcome to the Reading page!                    ");
                         Rainbow();
                         Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write("----------------------------------------------------------------");
                         Rainbow();
                         Console.WriteLine("|");
-                        List<string> Project = new List<string>();
-                        int ProjectIDNumber = 1;
-                        Project.Add("Calender app");
-                        Project.Add("Underworld RPG");
-                        Project.Add("Underworld RPG website");
-                        Project.Add("Back");
-                        
+                        List<string> ReadingMaterial = new List<string>();
+                        int ReadingMaterialNumberID = 1;
+                        ReadingMaterial.Add("Tech");
+                        ReadingMaterial.Add("Leisure");
+                        ReadingMaterial.Add("Back");
+                            
 
-                        foreach (string Category in Project)
+                            foreach (string Category in ReadingMaterial)
                             {
                                 Console.ForegroundColor = ConsoleColor.Gray;
-                                Console.Write(ProjectIDNumber + ": ");
+                                Console.Write(ReadingMaterialNumberID + ": ");
                                 Console.ForegroundColor = ConsoleColor.Cyan;
-                                Console.Write(Category);
-                                ProjectIDNumber += 1;
-                                int characterlength = Category.Length; 
-                                do
-                                {
-                                    Console.Write(" ");
-                                    characterlength +=1;
-                                }
-                                while(characterlength<63);
-                                Rainbow();
-                                Console.WriteLine("|");
-                                }
-                                Console.ForegroundColor = ConsoleColor.White;
-                                int ProjectNumberSelected;
-                                int RainbowClock = 0;
-                                do
-                                {
-                                    Rainbow();
-                                    Console.Write("_");
-                                    RainbowClock+=1;
-                                }
-                                while(RainbowClock<66);
-                                Rainbow();
-                                Console.WriteLine("|");
-                                ProjectNumberSelected = Convert.ToInt32(Console.ReadLine());
+                                Console.WriteLine(Category);
+                                ReadingMaterialNumberID += 1;
                             }
-        
-                if (NumberSelected == 2)
-                    {
-                        // do 
-                        // {
-                            GetDate();
                             
-                            // i = 3;
+                            
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine("Pick a field!");
+                        int ReadingNumberSelected;
+                        ReadingNumberSelected = Convert.ToInt32(Console.ReadLine());
+                            
+                        if (ReadingNumberSelected == 1)
+                        {
+                            GetDate();
                             Console.Write("----------------------------------------------------------------");
                             Rainbow();
                             Console.WriteLine("|");
-                            Console.ForegroundColor = ConsoleColor.Yellow;
-                            Console.Write("                  Welcome to the Reading page!                    ");
+                            Console.ForegroundColor = ConsoleColor.Magenta;
+                            Console.Write("                       Tech Books/Articles                        ");
                             Rainbow();
                             Console.WriteLine("|");
                             Console.ForegroundColor = ConsoleColor.White;
                             Console.Write("----------------------------------------------------------------");
                             Rainbow();
                             Console.WriteLine("|");
-                            List<string> ReadingMaterial = new List<string>();
-                            int ReadingMaterialNumberID = 1;
-                            ReadingMaterial.Add("Tech");
-                            ReadingMaterial.Add("Leisure");
-                            ReadingMaterial.Add("Back");
-                            
+                            List<string> TechBooksAndArticles = new List<string>();
+                            int TechBooksAndArticlesIDNumber = 1;
+                            TechBooksAndArticles.Add("New Book/Article");
+                            TechBooksAndArticles.Add("Back");
+                            TechBooksAndArticles.Add("Home");
+                                
 
-                                foreach (string Category in ReadingMaterial)
-                                {
-                                    Console.ForegroundColor = ConsoleColor.Gray;
-                                    Console.Write(ReadingMaterialNumberID + ": ");
-                                    Console.ForegroundColor = ConsoleColor.Cyan;
-                                    Console.WriteLine(Category);
-                                    ReadingMaterialNumberID += 1;
-                                }
-                            
-                            
+
+                            foreach (string Category in TechBooksAndArticles)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Gray;
+                                Console.Write(TechBooksAndArticlesIDNumber + ": ");
+                                Console.ForegroundColor = ConsoleColor.Blue;
+                                Console.WriteLine(Category);
+                                TechBooksAndArticlesIDNumber += 1;
+                            }
+
                             Console.ForegroundColor = ConsoleColor.White;
                             Console.WriteLine("Pick a field!");
-                            int ReadingNumberSelected;
-                            ReadingNumberSelected = Convert.ToInt32(Console.ReadLine());
-                            
-                            if (ReadingNumberSelected == 1)
+                            int TechBooksAndArticlesNumberSelected;
+                            TechBooksAndArticlesNumberSelected = Convert.ToInt32(Console.ReadLine());
+
+                            if (TechBooksAndArticlesNumberSelected == 2)
                             {
-                                GetDate();
-                                Console.Write("----------------------------------------------------------------");
-                                Rainbow();
-                                Console.WriteLine("|");
-                                Console.ForegroundColor = ConsoleColor.Magenta;
-                                Console.Write("                       Tech Books/Articles                        ");
-                                Rainbow();
-                                Console.WriteLine("|");
-                                Console.ForegroundColor = ConsoleColor.White;
-                                Console.Write("----------------------------------------------------------------");
-                                Rainbow();
-                                Console.WriteLine("|");
-                                List<string> TechBooksAndArticles = new List<string>();
-                                int TechBooksAndArticlesIDNumber = 1;
-                                TechBooksAndArticles.Add("New Book/Article");
-                                TechBooksAndArticles.Add("Back");
-                                TechBooksAndArticles.Add("Home");
-                                
-
-
-                                foreach (string Category in TechBooksAndArticles)
-                                {
-                                    Console.ForegroundColor = ConsoleColor.Gray;
-                                    Console.Write(TechBooksAndArticlesIDNumber + ": ");
-                                    Console.ForegroundColor = ConsoleColor.Blue;
-                                    Console.WriteLine(Category);
-                                    TechBooksAndArticlesIDNumber += 1;
-                                }
-
-                                Console.ForegroundColor = ConsoleColor.White;
-                                Console.WriteLine("Pick a field!");
-                                int TechBooksAndArticlesNumberSelected;
-                                TechBooksAndArticlesNumberSelected = Convert.ToInt32(Console.ReadLine());
-
-                                if (TechBooksAndArticlesNumberSelected == 2)
-                                {
-                                    // i = 3;
-                                }
-
-                                if (TechBooksAndArticlesNumberSelected == 3)
-                                {
-                                    // i = 2;
-                                }
+                                // i = 3;
                             }
-                        
-                        if (ReadingNumberSelected == 2)
-                            {
-                                GetDate();
-                                Console.Write("----------------------------------------------------------------");
-                                Rainbow();
-                                Console.WriteLine("|");
-                                Console.ForegroundColor = ConsoleColor.Magenta;
-                                Console.Write("                           Casual Reading                         ");
-                                Rainbow();
-                                Console.WriteLine("|");
-                                Console.ForegroundColor = ConsoleColor.White;
-                                Console.Write("----------------------------------------------------------------");
-                                Rainbow();
-                                Console.WriteLine("|");
-                                List<string> CasualReading = new List<string>();
-                                int CasualReadingIDNumber = 1;
-                                CasualReading.Add("New Book/Article");
-                                CasualReading.Add("Back");
-                                CasualReading.Add("Home");
-                                
 
-                                foreach (string Category in CasualReading)
-                                {
-                                    Console.ForegroundColor = ConsoleColor.Gray;
-                                    Console.Write(CasualReadingIDNumber + ": ");
-                                    Console.ForegroundColor = ConsoleColor.Blue;
-                                    Console.WriteLine(Category);
-                                    CasualReadingIDNumber =+ 1;
-                                }
-                                Console.ForegroundColor = ConsoleColor.White;
+                            if (TechBooksAndArticlesNumberSelected == 3)
+                            {
+                                // i = 2;
                             }
                         }
-                    // while(i==3);
-                    // }
-        
-                if (NumberSelected == 3)
-                    { 
-                        GetDate();
-                        Console.Write("----------------------------------------------------------------");
-                        Rainbow();
-                        Console.WriteLine("|");
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.Write("                Welcome to the Vocabulary page!                   ");
-                        Rainbow();
-                        Console.WriteLine("|");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.Write("----------------------------------------------------------------");
-                        Rainbow();
-                        Console.WriteLine("|");
-                        List<string> Vocab = new List<string>();
-                        int VocabIDNumber = 1;
-                        Vocab.Add("Tech Jargon");
-                        Vocab.Add("Syntax");
-                        Vocab.Add("English");
-                        Vocab.Add("Other Langueges"); 
-                        Vocab.Add("Back");
+                        
+                    if (ReadingNumberSelected == 2)
+                        {
+                            GetDate();
+                            Console.Write("----------------------------------------------------------------");
+                            Rainbow();
+                            Console.WriteLine("|");
+                            Console.ForegroundColor = ConsoleColor.Magenta;
+                            Console.Write("                           Casual Reading                         ");
+                            Rainbow();
+                            Console.WriteLine("|");
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.Write("----------------------------------------------------------------");
+                            Rainbow();
+                            Console.WriteLine("|");
+                            List<string> CasualReading = new List<string>();
+                            int CasualReadingIDNumber = 1;
+                            CasualReading.Add("New Book/Article");
+                            CasualReading.Add("Back");
+                            CasualReading.Add("Home");
+                                
+
+                            foreach (string Category in CasualReading)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Gray;
+                                Console.Write(CasualReadingIDNumber + ": ");
+                                Console.ForegroundColor = ConsoleColor.Blue;
+                                Console.WriteLine(Category);
+                                CasualReadingIDNumber =+ 1;
+                            }
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
+                    }   
+            if (NumberSelected == 3)
+                { 
+                    GetDate();
+                    Console.Write("----------------------------------------------------------------");
+                    Rainbow();
+                    Console.WriteLine("|");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write("                Welcome to the Vocabulary page!                   ");
+                    Rainbow();
+                    Console.WriteLine("|");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.Write("----------------------------------------------------------------");
+                    Rainbow();
+                    Console.WriteLine("|");
+                    List<string> Vocab = new List<string>();
+                    int VocabIDNumber = 1;
+                    Vocab.Add("Tech Jargon");
+                    Vocab.Add("Syntax");
+                    Vocab.Add("English");
+                    Vocab.Add("Other Langueges"); 
+                    Vocab.Add("Back");
                         
 
-                        foreach (string Category in Vocab)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Gray;
-                            Console.Write(VocabIDNumber + ": ");
-                            Console.ForegroundColor = ConsoleColor.Cyan;
-                            Console.WriteLine(Category);
-                            VocabIDNumber += 1;
-                        }
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Pick a field!");
-                        int VocabNumberSelected;
-                        VocabNumberSelected = Convert.ToInt32(Console.ReadLine());    
-
-                        if (VocabNumberSelected == 1)
-                        {
-                            Console.WriteLine("this worked");
-                        }
-                    }
-        
-                if (NumberSelected == 4)
+                    foreach (string Category in Vocab)
                     {
-                        GetDate();
-                        Console.Write("----------------------------------------------------------------");
-                        Rainbow();
-                        Console.WriteLine("|");
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.Write("                 Welcome to the Exercise page!                    ");
-                        Rainbow();
-                        Console.WriteLine("|");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.Write("----------------------------------------------------------------");
-                        Rainbow();
-                        Console.WriteLine("|");
-                        List<string> Workout = new List<string>();
-                        int WorkoutNumberID = 1;
-                        Workout.Add("Running");
-                        Workout.Add("Hiking");
-                        Workout.Add("Pushups");
-                        Workout.Add("Pullups");
-                        Workout.Add("Gym");
-                        Workout.Add("Walking home from the bar while hammered");
-                        Workout.Add("Back");
-                        
-
-                        foreach (string Category in Workout)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Gray;
-                            Console.Write(WorkoutNumberID+ ": ");
-                            Console.ForegroundColor = ConsoleColor.Cyan;
-                            Console.WriteLine(Category);
-                            WorkoutNumberID +=1 ;
-                        }
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Pick a field!");
-                        int WorkoutNumberSelected;
-                        WorkoutNumberSelected = Convert.ToInt32(Console.ReadLine());
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.Write(VocabIDNumber + ": ");
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine(Category);
+                        VocabIDNumber += 1;
                     }
-        
-                if (NumberSelected == 5)
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Pick a field!");
+                    int VocabNumberSelected;
+                    VocabNumberSelected = Convert.ToInt32(Console.ReadLine());    
+
+                    if (VocabNumberSelected == 1)
                     {
-                        GetDate();
-                        Console.Write("----------------------------------------------------------------");
-                        Rainbow();
-                        Console.WriteLine("|");
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.Write("                     Welcome to the Work page!                    ");
-                        Rainbow();
-                        Console.WriteLine("|");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.Write("----------------------------------------------------------------");
-                        Rainbow();
-                        Console.WriteLine("|");
-                        List<string> Jobs = new List<string>();
-                        int JobNumberID = 1;
-                        Jobs.Add("Waiter");
-                        Jobs.Add("Bartender");
-                        Jobs.Add("Runner");
-                        Jobs.Add("Intern at KC");
-                        Jobs.Add("Back");
-                        
-
-                        foreach (string Category in Jobs)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Gray;
-                            Console.Write(JobNumberID + ": ");
-                            Console.ForegroundColor = ConsoleColor.Cyan;
-                            Console.WriteLine(Category);
-                            JobNumberID += 1;
-                        }
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Pick a field!");
-                        int JobNumberSelected;
-                        JobNumberSelected = Convert.ToInt32(Console.ReadLine());
-                        
+                        Console.WriteLine("this worked");
                     }
+                }
         
-                if (NumberSelected == 6)
-                    {
-                        GetDate();
-                        Console.Write("----------------------------------------------------------------");
-                        Rainbow();
-                        Console.WriteLine("|");
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.Write("                 Welcome to the Stat page!                        ");
-                        Rainbow();
-                        Console.WriteLine("|");
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.Write("----------------------------------------------------------------");
-                        Rainbow();
-                        Console.WriteLine("|");
-                        List<string> StatCategories = new List<string>();
-                        int StatNumberID = 1;
-                        StatCategories.Add("Breakdowns");
-                        StatCategories.Add("Coding Projects");
-                        StatCategories.Add("Reading Selection");
-                        StatCategories.Add("Vocabulary Timespent");
-                        StatCategories.Add("Type of Workout");
-                        StatCategories.Add("Job");
-                        StatCategories.Add("Back");
+            if (NumberSelected == 4)
+                {
+                    GetDate();
+                    Console.Write("----------------------------------------------------------------");
+                    Rainbow();
+                    Console.WriteLine("|");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write("                 Welcome to the Exercise page!                    ");
+                    Rainbow();
+                    Console.WriteLine("|");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.Write("----------------------------------------------------------------");
+                    Rainbow();
+                    Console.WriteLine("|");
+                    List<string> Workout = new List<string>();
+                    int WorkoutNumberID = 1;
+                    Workout.Add("Running");
+                    Workout.Add("Hiking");
+                    Workout.Add("Pushups");
+                    Workout.Add("Pullups");
+                    Workout.Add("Gym");
+                    Workout.Add("Walking home from the bar while hammered");
+                    Workout.Add("Back");
                         
 
-                        foreach (string Category in StatCategories)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Gray;
-                            Console.Write(StatNumberID + ": ");
-                            Console.ForegroundColor = ConsoleColor.Cyan;
-                            Console.WriteLine(Category);
-                            StatNumberID += 1;
-                        }
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Pick a field!");
-                        int StatNumberSelected;
-                        StatNumberSelected = Convert.ToInt32(Console.ReadLine());
-
-                        if (StatNumberSelected ==7)
-                        {
-                            Console.WriteLine("Going Back!");
-                            // i=0;
-                        }
+                    foreach (string Category in Workout)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.Write(WorkoutNumberID+ ": ");
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine(Category);
+                        WorkoutNumberID +=1 ;
                     }
-                    
-            //     }   
-            // while(i<3);
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Pick a field!");
+                    int WorkoutNumberSelected;
+                    WorkoutNumberSelected = Convert.ToInt32(Console.ReadLine());
+                }
+        
+            if (NumberSelected == 5)
+                {
+                    GetDate();
+                    Console.Write("----------------------------------------------------------------");
+                    Rainbow();
+                    Console.WriteLine("|");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write("                     Welcome to the Work page!                    ");
+                    Rainbow();
+                    Console.WriteLine("|");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.Write("----------------------------------------------------------------");
+                    Rainbow();
+                    Console.WriteLine("|");
+                    List<string> Jobs = new List<string>();
+                    int JobNumberID = 1;
+                    Jobs.Add("Waiter");
+                    Jobs.Add("Bartender");
+                    Jobs.Add("Runner");
+                    Jobs.Add("Intern at KC");
+                    Jobs.Add("Back");
+                        
+
+                    foreach (string Category in Jobs)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.Write(JobNumberID + ": ");
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine(Category);
+                        JobNumberID += 1;
+                    }
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Pick a field!");
+                    int JobNumberSelected;
+                    JobNumberSelected = Convert.ToInt32(Console.ReadLine());
+                        
+                }
+        
+            if (NumberSelected == 6)
+                {
+                    GetDate();
+                    Console.Write("----------------------------------------------------------------");
+                    Rainbow();
+                    Console.WriteLine("|");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write("                 Welcome to the Stat page!                        ");
+                    Rainbow();
+                    Console.WriteLine("|");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.Write("----------------------------------------------------------------");
+                    Rainbow();
+                    Console.WriteLine("|");
+                    List<string> StatCategories = new List<string>();
+                    int StatNumberID = 1;
+                    StatCategories.Add("Breakdowns");
+                    StatCategories.Add("Coding Projects");
+                    StatCategories.Add("Reading Selection");
+                    StatCategories.Add("Vocabulary Timespent");
+                    StatCategories.Add("Type of Workout");
+                    StatCategories.Add("Job");
+                    StatCategories.Add("Back");
+                        
+
+                    foreach (string Category in StatCategories)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.Write(StatNumberID + ": ");
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine(Category);
+                        StatNumberID += 1;
+                    }
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Pick a field!");
+                    int StatNumberSelected;
+                    StatNumberSelected = Convert.ToInt32(Console.ReadLine());
+
+                    if (StatNumberSelected ==7)
+                    {
+                        Console.WriteLine("Going Back!");
+                    }
+                }
             Console.ResetColor();
             Console.Clear();
-
-            
-
-            
-        
         }
 
         public static void CenterDate()
@@ -390,7 +366,6 @@ namespace calender_app
         public static void Rainbow()
         {
             
-            int x =0;
             if (x ==1)
             {
                 Console.ForegroundColor = ConsoleColor.White;
@@ -440,9 +415,7 @@ namespace calender_app
                 Console.ForegroundColor = ConsoleColor.Blue;
                 x-=8;
             }
-            x+=1;
-            
-                    
+            x += 1;
         }
 
         public static void GetDate()
@@ -488,6 +461,7 @@ namespace calender_app
             GetDate(); 
             Rainbow();
             Console.Write("|");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Write("----------------------------------------------------------------");
             Rainbow();
             Console.WriteLine("|");
