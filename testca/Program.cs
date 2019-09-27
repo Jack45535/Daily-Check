@@ -6,18 +6,23 @@ namespace calender_app
 {
     class Program
     {
-        int x = 1;
+        // int i = 0;
+        // int x = 1;
 
         static void Main(string[] args)
         {
-            int i = 0;
+
+            int NumberSelected = 0;
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
             Console.Clear();
             
-            do
-                {
+            // do
+            //     {
+                    
                     HomePage();
+                    NumberSelected = HomePage();
+                    
                     
                 if (NumberSelected == 1)
                     {
@@ -75,11 +80,11 @@ namespace calender_app
         
                 if (NumberSelected == 2)
                     {
-                        do 
-                        {
+                        // do 
+                        // {
                             GetDate();
                             
-                            i = 3;
+                            // i = 3;
                             Console.Write("----------------------------------------------------------------");
                             Rainbow();
                             Console.WriteLine("|");
@@ -151,12 +156,12 @@ namespace calender_app
 
                                 if (TechBooksAndArticlesNumberSelected == 2)
                                 {
-                                    i = 3;
+                                    // i = 3;
                                 }
 
                                 if (TechBooksAndArticlesNumberSelected == 3)
                                 {
-                                    i = 2;
+                                    // i = 2;
                                 }
                             }
                         
@@ -192,8 +197,8 @@ namespace calender_app
                                 Console.ForegroundColor = ConsoleColor.White;
                             }
                         }
-                    while(i==3);
-                    }
+                    // while(i==3);
+                    // }
         
                 if (NumberSelected == 3)
                     { 
@@ -355,12 +360,12 @@ namespace calender_app
                         if (StatNumberSelected ==7)
                         {
                             Console.WriteLine("Going Back!");
-                            i=0;
+                            // i=0;
                         }
                     }
                     
-                }   
-            while(i<3);
+            //     }   
+            // while(i<3);
             Console.ResetColor();
             Console.Clear();
 
@@ -384,6 +389,8 @@ namespace calender_app
     
         public static void Rainbow()
         {
+            
+            int x =0;
             if (x ==1)
             {
                 Console.ForegroundColor = ConsoleColor.White;
@@ -434,6 +441,8 @@ namespace calender_app
                 x-=8;
             }
             x+=1;
+            
+                    
         }
 
         public static void GetDate()
@@ -469,10 +478,11 @@ namespace calender_app
             
         }
 
-        public static void HomePage()
+        public static int HomePage()
         {
-            i=i+1;
-            int NumberSelected;
+            // i=i+1;
+            // int x=1;
+            int NumberSelected = 0;
             List<string> Categories = new List<string>();
             int NumberID = 1;
             GetDate(); 
@@ -537,6 +547,7 @@ namespace calender_app
             Rainbow();
             Console.WriteLine("|");
             NumberSelected = Convert.ToInt32(Console.ReadLine());
+            return NumberSelected;
 
         }
     }
