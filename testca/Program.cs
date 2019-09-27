@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 
 
@@ -8,99 +8,30 @@ namespace calender_app
     {
         int x = 1;
 
-
-
-
-
         static void Main(string[] args)
         {
-            Program p = new Program();
             int i = 0;
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
             Console.Clear();
+            
             do
                 {
-                    i=i+1;
-                    int NumberSelected;
-                    List<string> Categories = new List<string>();
-                    int NumberID = 1;
-                    p.GetDate(); 
-                    p.Rainbow();
-                    Console.Write("|");
-                    Console.Write("----------------------------------------------------------------");
-                    p.Rainbow();
-                    Console.WriteLine("|");
-                    p.Rainbow();
-                    Console.Write("|");
-                    p.CenterDate();
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.Write("HOMEPAGE  ");
-                    p.CenterDate();
-                    p.Rainbow();
-                    Console.WriteLine("|");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.Write("|");
-                    Console.Write("----------------------------------------------------------------");
-                    p.Rainbow();
-                    Console.WriteLine("|");
-                    Categories.Add("Coding");
-                    Categories.Add("Reading");
-                    Categories.Add("Vocabulary");
-                    Categories.Add("Exercise");
-                    Categories.Add("Work");
-                    Categories.Add("Stats");
-                    
-                    foreach (string Category in Categories)
-                    {
-                        
-                        p.Rainbow();
-                        Console.Write("|");
-                        p.CenterDate();
-                        Console.ForegroundColor = ConsoleColor.Gray;
-                        Console.Write(NumberID + ": ");
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.Write(Category);
-                        
-                        NumberID += 1;
-                        int characterlength = Category.Length; 
-                        do
-                        {
-                            Console.Write(" ");
-                            characterlength +=1;
-                        }
-                        while(characterlength<34);
-                        p.Rainbow();
-                        Console.WriteLine("|");
-                    
-                    }
-                    p.Rainbow();
-                    int HomeRainbowClock = 0;
-                    Console.Write("|");
-                    do
-                        {
-                            p.Rainbow();       
-                            Console.Write("_");
-                            HomeRainbowClock+=1;
-                        }
-                    while(HomeRainbowClock<64);
-                    p.Rainbow();
-                    Console.WriteLine("|");
-                    NumberSelected = Convert.ToInt32(Console.ReadLine());
+                    HomePage();
                     
                 if (NumberSelected == 1)
                     {
-                        p.GetDate();
+                        GetDate();
                         Console.Write("----------------------------------------------------------------");
-                        p.Rainbow();
+                        Rainbow();
                         Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.Write("                    Welcome to the Coding page!                   ");
-                        p.Rainbow();
+                        Rainbow();
                         Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write("----------------------------------------------------------------");
-                        p.Rainbow();
+                        Rainbow();
                         Console.WriteLine("|");
                         List<string> Project = new List<string>();
                         int ProjectIDNumber = 1;
@@ -124,7 +55,7 @@ namespace calender_app
                                     characterlength +=1;
                                 }
                                 while(characterlength<63);
-                                p.Rainbow();
+                                Rainbow();
                                 Console.WriteLine("|");
                                 }
                                 Console.ForegroundColor = ConsoleColor.White;
@@ -132,12 +63,12 @@ namespace calender_app
                                 int RainbowClock = 0;
                                 do
                                 {
-                                    p.Rainbow();
+                                    Rainbow();
                                     Console.Write("_");
                                     RainbowClock+=1;
                                 }
                                 while(RainbowClock<66);
-                                p.Rainbow();
+                                Rainbow();
                                 Console.WriteLine("|");
                                 ProjectNumberSelected = Convert.ToInt32(Console.ReadLine());
                             }
@@ -146,19 +77,19 @@ namespace calender_app
                     {
                         do 
                         {
-                            p.GetDate();
+                            GetDate();
                             
                             i = 3;
                             Console.Write("----------------------------------------------------------------");
-                            p.Rainbow();
+                            Rainbow();
                             Console.WriteLine("|");
                             Console.ForegroundColor = ConsoleColor.Yellow;
                             Console.Write("                  Welcome to the Reading page!                    ");
-                            p.Rainbow();
+                            Rainbow();
                             Console.WriteLine("|");
                             Console.ForegroundColor = ConsoleColor.White;
                             Console.Write("----------------------------------------------------------------");
-                            p.Rainbow();
+                            Rainbow();
                             Console.WriteLine("|");
                             List<string> ReadingMaterial = new List<string>();
                             int ReadingMaterialNumberID = 1;
@@ -184,17 +115,17 @@ namespace calender_app
                             
                             if (ReadingNumberSelected == 1)
                             {
-                                p.GetDate();
+                                GetDate();
                                 Console.Write("----------------------------------------------------------------");
-                                p.Rainbow();
+                                Rainbow();
                                 Console.WriteLine("|");
                                 Console.ForegroundColor = ConsoleColor.Magenta;
                                 Console.Write("                       Tech Books/Articles                        ");
-                                p.Rainbow();
+                                Rainbow();
                                 Console.WriteLine("|");
                                 Console.ForegroundColor = ConsoleColor.White;
                                 Console.Write("----------------------------------------------------------------");
-                                p.Rainbow();
+                                Rainbow();
                                 Console.WriteLine("|");
                                 List<string> TechBooksAndArticles = new List<string>();
                                 int TechBooksAndArticlesIDNumber = 1;
@@ -231,17 +162,17 @@ namespace calender_app
                         
                         if (ReadingNumberSelected == 2)
                             {
-                                p.GetDate();
+                                GetDate();
                                 Console.Write("----------------------------------------------------------------");
-                                p.Rainbow();
+                                Rainbow();
                                 Console.WriteLine("|");
                                 Console.ForegroundColor = ConsoleColor.Magenta;
                                 Console.Write("                           Casual Reading                         ");
-                                p.Rainbow();
+                                Rainbow();
                                 Console.WriteLine("|");
                                 Console.ForegroundColor = ConsoleColor.White;
                                 Console.Write("----------------------------------------------------------------");
-                                p.Rainbow();
+                                Rainbow();
                                 Console.WriteLine("|");
                                 List<string> CasualReading = new List<string>();
                                 int CasualReadingIDNumber = 1;
@@ -266,17 +197,17 @@ namespace calender_app
         
                 if (NumberSelected == 3)
                     { 
-                        p.GetDate();
+                        GetDate();
                         Console.Write("----------------------------------------------------------------");
-                        p.Rainbow();
+                        Rainbow();
                         Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.Write("                Welcome to the Vocabulary page!                   ");
-                        p.Rainbow();
+                        Rainbow();
                         Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write("----------------------------------------------------------------");
-                        p.Rainbow();
+                        Rainbow();
                         Console.WriteLine("|");
                         List<string> Vocab = new List<string>();
                         int VocabIDNumber = 1;
@@ -308,17 +239,17 @@ namespace calender_app
         
                 if (NumberSelected == 4)
                     {
-                        p.GetDate();
+                        GetDate();
                         Console.Write("----------------------------------------------------------------");
-                        p.Rainbow();
+                        Rainbow();
                         Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.Write("                 Welcome to the Exercise page!                    ");
-                        p.Rainbow();
+                        Rainbow();
                         Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write("----------------------------------------------------------------");
-                        p.Rainbow();
+                        Rainbow();
                         Console.WriteLine("|");
                         List<string> Workout = new List<string>();
                         int WorkoutNumberID = 1;
@@ -347,17 +278,17 @@ namespace calender_app
         
                 if (NumberSelected == 5)
                     {
-                        p.GetDate();
+                        GetDate();
                         Console.Write("----------------------------------------------------------------");
-                        p.Rainbow();
+                        Rainbow();
                         Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.Write("                     Welcome to the Work page!                    ");
-                        p.Rainbow();
+                        Rainbow();
                         Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write("----------------------------------------------------------------");
-                        p.Rainbow();
+                        Rainbow();
                         Console.WriteLine("|");
                         List<string> Jobs = new List<string>();
                         int JobNumberID = 1;
@@ -385,17 +316,17 @@ namespace calender_app
         
                 if (NumberSelected == 6)
                     {
-                        p.GetDate();
+                        GetDate();
                         Console.Write("----------------------------------------------------------------");
-                        p.Rainbow();
+                        Rainbow();
                         Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.Write("                 Welcome to the Stat page!                        ");
-                        p.Rainbow();
+                        Rainbow();
                         Console.WriteLine("|");
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.Write("----------------------------------------------------------------");
-                        p.Rainbow();
+                        Rainbow();
                         Console.WriteLine("|");
                         List<string> StatCategories = new List<string>();
                         int StatNumberID = 1;
@@ -439,7 +370,7 @@ namespace calender_app
         
         }
 
-        public void CenterDate()
+        public static void CenterDate()
         {
             int CenterDateClock = 0;
             do
@@ -451,7 +382,7 @@ namespace calender_app
         }
 
     
-        public void Rainbow()
+        public static void Rainbow()
         {
             if (x ==1)
             {
@@ -505,33 +436,30 @@ namespace calender_app
             x+=1;
         }
 
-        public void GetDate()
-        {
-                    Program p = new Program();
-            
+        public static void GetDate()
+        {   
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             var dateAndTime = DateTime.Now;
             var date = dateAndTime.Date;
             Console.ForegroundColor = ConsoleColor.White;
-            p.TopndBottomBorder();
+            TopndBottomBorder();
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            p.CenterDate();
+            CenterDate();
             Console.Write(date.ToString("MM/dd/yyyy"));
-            p.CenterDate();
+            CenterDate();
             Console.ForegroundColor = ConsoleColor.White;
-            p.Rainbow();
+            Rainbow();
             Console.WriteLine("|");
             Console.ForegroundColor = ConsoleColor.White;
             
         }
 
-        public void TopndBottomBorder ()
+        public static void TopndBottomBorder ()
         {
-                    Program p = new Program();
             int RainbowClock = 0;
             do
             {
-                p.Rainbow();
+                Rainbow();
                 Console.Write("_");
                 RainbowClock+=1;
             }
@@ -540,9 +468,77 @@ namespace calender_app
             Console.Write("|");
             
         }
-    
-    
-    
+
+        public static void HomePage()
+        {
+            i=i+1;
+            int NumberSelected;
+            List<string> Categories = new List<string>();
+            int NumberID = 1;
+            GetDate(); 
+            Rainbow();
+            Console.Write("|");
+            Console.Write("----------------------------------------------------------------");
+            Rainbow();
+            Console.WriteLine("|");
+            Rainbow();
+            Console.Write("|");
+            CenterDate();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("HOMEPAGE  ");
+            CenterDate();
+            Rainbow();
+            Console.WriteLine("|");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("|");
+            Console.Write("----------------------------------------------------------------");
+            Rainbow();
+            Console.WriteLine("|");
+            Categories.Add("Coding");
+            Categories.Add("Reading");
+            Categories.Add("Vocabulary");
+            Categories.Add("Exercise");
+            Categories.Add("Work");
+            Categories.Add("Stats");
+            
+            foreach (string Category in Categories)
+            {
+                
+                Rainbow();
+                Console.Write("|");
+                CenterDate();
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.Write(NumberID + ": ");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write(Category);
+                
+                NumberID += 1;
+                int characterlength = Category.Length; 
+                do
+                {
+                    Console.Write(" ");
+                    characterlength +=1;
+                }
+                while(characterlength<34);
+                Rainbow();
+                Console.WriteLine("|");
+            
+            }
+            Rainbow();
+            int HomeRainbowClock = 0;
+            Console.Write("|");
+            do
+                {
+                    Rainbow();       
+                    Console.Write("_");
+                    HomeRainbowClock+=1;
+                }
+            while(HomeRainbowClock<64);
+            Rainbow();
+            Console.WriteLine("|");
+            NumberSelected = Convert.ToInt32(Console.ReadLine());
+
+        }
     }
 
 }
