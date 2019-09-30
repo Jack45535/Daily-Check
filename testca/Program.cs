@@ -6,54 +6,148 @@ namespace calender_app
 {
     class Program
     {
-        private static int NumberID;
         private static int x;
+        private static int i = 1;
         //MAIN--------------------------------------------------------------------------------------------------------------------
         static void Main(string[] args)
         {
+
             int NumberSelected = 0;
+            int ProjectNumberSelected = 0;
             int ReadingNumberSelected = 0;
+            int TechBooksAndArticlesNumberSelected = 0;
+            int CasualBooksAndArticlesNumberSelected = 0;
+            int VocabNumberSelected = 0;
+            int WorkoutNumberSelected = 0;
+            int WorkNumberSelected = 0;
+            int StatNumberSelected = 0;
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
-            NumberSelected = HomePage();
-            if (NumberSelected == 1)
+            do
             {
-                CodingPage();
-            }
-
-            if (NumberSelected == 2)
-            {
-                ReadingNumberSelected = ReadingPage();
-                if (ReadingNumberSelected == 1)
+                NumberSelected = HomePage();
+                if (NumberSelected == 1)
                 {
-                    TechReadingPage();
+                    Console.Clear();
+                    ProjectNumberSelected = CodingPage();
+                    if (ProjectNumberSelected == 4)
+                    {
+                        Console.Clear();
+                    }
+                    if (ProjectNumberSelected == 5)
+                    {
+                        Console.Clear();
+                        i = 0;
+                    }
                 }
-                if (ReadingNumberSelected == 2)
+
+                if (NumberSelected == 2)
                 {
-                    CasualReadingPage();
+                    i = 2;
+                    do
+                    {
+                        Console.Clear();
+                        ReadingNumberSelected = ReadingPage();
+                        if (ReadingNumberSelected == 1)
+                        {
+                            Console.Clear();
+                            TechBooksAndArticlesNumberSelected = TechReadingPage();
+                            if (TechBooksAndArticlesNumberSelected == 2)
+                            {
+                                Console.Clear();
+                                i = 2;
+                            }
+                            if (TechBooksAndArticlesNumberSelected == 3)
+                            {
+                                Console.Clear();
+                                i = 1;
+                            }
+                            if (TechBooksAndArticlesNumberSelected == 4)
+                            {
+                                Console.Clear();
+                                i = 0;
+                            }
+                        }
+                        if (ReadingNumberSelected == 2)
+                        {
+                            Console.Clear();
+                            CasualBooksAndArticlesNumberSelected =CasualReadingPage();
+                            if (CasualBooksAndArticlesNumberSelected == 2)
+                            {
+                                Console.Clear();
+                                i = 2;
+                            }
+                            if (CasualBooksAndArticlesNumberSelected == 3)
+                            {
+                                Console.Clear();
+                                i = 1;
+                            }
+                            if (CasualBooksAndArticlesNumberSelected == 4)
+                            {
+                                Console.Clear();
+                                i = 0;
+                            }
+                        }
+                        if (ReadingNumberSelected == 3)
+                        {
+                            Console.Clear();
+                            i = 1;
+                        }
+                        if (ReadingNumberSelected == 4)
+                        {
+                            Console.Clear();
+                            i = 0;
+                        }
+                    } while (i == 2);
                 }
-            }
 
-            if (NumberSelected == 3)
-            {
-                VocabPage();
-            }
+                if (NumberSelected == 3)
+                {
+                    Console.Clear();
+                    VocabNumberSelected = VocabPage();
+                    if (VocabNumberSelected == 5)
+                    {
+                        Console.Clear();
+                    }
 
-            if (NumberSelected == 4)
-            {
-                ExercisePage();
-            }
+                }
 
-            if (NumberSelected == 5)
-            {
-                WorkPage();
-            }
+                if (NumberSelected == 4)
+                {
+                    Console.Clear();
+                    WorkoutNumberSelected = ExercisePage();
+                    if (WorkoutNumberSelected == 6)
+                    {
+                        Console.Clear();
+                    }
+                }
 
-            if (NumberSelected == 6)
-            {
-                StatPage();
-            }
+                if (NumberSelected == 5)
+                {
+                    Console.Clear();
+                    WorkNumberSelected = WorkPage();
+                    if (WorkNumberSelected == 5)
+                    {
+                        Console.Clear();
+                    }
 
+                }
+
+                if (NumberSelected == 6)
+                {
+                    Console.Clear();
+                    StatNumberSelected = StatPage();
+                    if (StatNumberSelected == 5)
+                    {
+                        Console.Clear();
+                    }
+                }
+
+                if (NumberSelected == 7)
+                {
+                    i =0;
+                }
+            } while (i==1);
             Console.ResetColor();
             Console.Clear();
         }
@@ -61,6 +155,7 @@ namespace calender_app
 
         public static int HomePage()
         {
+            TopSpacer();
             int NumberSelected = 0;
             TopOfHeader();
             Console.ForegroundColor = ConsoleColor.Red;
@@ -76,34 +171,63 @@ namespace calender_app
 
         public static void HomeListandBorders()
         {
-            List<string> Categories = new List<string>();
             int NumberID = 1;
-            Categories.Add("Coding");
-            Categories.Add("Reading");
-            Categories.Add("Vocabulary");
-            Categories.Add("Exercise");
-            Categories.Add("Work");
-            Categories.Add("Stats");
+            List<string> Categories = new List<string>
+            {
+                "Coding",
+                " ",
+                "Reading",
+                " ",
+                "Vocabulary",
+                " ",
+                "Exercise",
+                " ",
+                "Work",
+                " ",
+                "Stats",
+                " ",
+                "Exit"
+            };
             foreach (string Category in Categories)
             {
-                Rainbow();
-                Console.Write("|");
-                CenterDate();
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.Write(NumberID + ": ");
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write(Category);
-
-                NumberID += 1;
                 int characterlength = Category.Length;
-                do
+                if (Category.Length == 1)
                 {
-                    Console.Write(" ");
-                    characterlength += 1;
+                    SideSpacer();
+                    Rainbow();
+                    Console.Write("|");
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 65);
+                    Rainbow();
+                    Console.WriteLine("|");
                 }
-                while (characterlength < 34);
-                Rainbow();
-                Console.WriteLine("|");
+                else
+                {
+                    SideSpacer();
+                    Rainbow();
+                    Console.Write("|");
+                    CenterDate();
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.Write(NumberID + ": ");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write(Category);
+
+                    NumberID += 1;
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 34);
+                    Rainbow();
+                    Console.WriteLine("|");
+                }
             }
 
         }
@@ -111,6 +235,7 @@ namespace calender_app
 
         public static int CodingPage()
         {
+            TopSpacer();
             int ProjectNumberSelected;
             TopOfHeader();
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -125,37 +250,66 @@ namespace calender_app
 
         public static void CodingListandBorders()
         {
-            List<string> Project = new List<string>();
+            List<string> Project = new List<string>
+            {
+                "Calender app",
+                " ",
+                "Underworld RPG",
+                " ",
+                "Underworld RPG website",
+                " ",
+                "Home",
+                " ",
+                "Exit"
+            };
             int NumberID = 1;
-            Project.Add("Calender app");
-            Project.Add("Underworld RPG");
-            Project.Add("Underworld RPG website");
-            Project.Add("Back");
             foreach (string Category in Project)
             {
-                Rainbow();
-                Console.Write("|");
-                CenterDate();
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.Write(NumberID + ": ");
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.Write(Category);
-
-                NumberID += 1;
                 int characterlength = Category.Length;
-                do
+                if (Category.Length == 1)
                 {
-                    Console.Write(" ");
-                    characterlength += 1;
+                    SideSpacer();
+                    Rainbow();
+                    Console.Write("|");
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 65);
+                    Rainbow();
+                    Console.WriteLine("|");
                 }
-                while (characterlength < 34);
-                Rainbow();
-                Console.WriteLine("|");
+                else
+                {
+                    SideSpacer();
+                    Rainbow();
+                    Console.Write("|");
+                    CenterDate();
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.Write(NumberID + ": ");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.Write(Category);
+
+                    NumberID += 1;
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 34);
+                    Rainbow();
+                    Console.WriteLine("|");
+                }
             }
+
         }
         //----------------------------------------------------------------------Tier 1 Reading
         public static int ReadingPage()
         {
+            TopSpacer();
             int ReadingNumberSelected;
             TopOfHeader();
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -170,36 +324,63 @@ namespace calender_app
 
         public static void ReadingListandBorders()
         {
-            List<string> ReadingMaterial = new List<string>();
             int NumberID = 1;
-            ReadingMaterial.Add("Tech");
-            ReadingMaterial.Add("Leisure");
-            ReadingMaterial.Add("Back");
+            List<string> ReadingMaterial = new List<string>
+            {
+                "Tech",
+                " ",
+                "Leisure",
+                " ",
+                "Home",
+                " ",
+                "Exit"
+            };
             foreach (string Category in ReadingMaterial)
             {
-                Rainbow();
-                Console.Write("|");
-                CenterDate();
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.Write(NumberID + ": ");
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.Write(Category);
-
-                NumberID += 1;
                 int characterlength = Category.Length;
-                do
+                if (Category.Length == 1)
                 {
-                    Console.Write(" ");
-                    characterlength += 1;
+                    SideSpacer();
+                    Rainbow();
+                    Console.Write("|");
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 65);
+                    Rainbow();
+                    Console.WriteLine("|");
                 }
-                while (characterlength < 34);
-                Rainbow();
-                Console.WriteLine("|");
+                else
+                {
+                    SideSpacer();
+                    Rainbow();
+                    Console.Write("|");
+                    CenterDate();
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.Write(NumberID + ": ");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.Write(Category);
+
+                    NumberID += 1;
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 34);
+                    Rainbow();
+                    Console.WriteLine("|");
+                }
             }
         }
         //----------------------------------------------------------------------Tier 2 Reading (TECH)
         public static int TechReadingPage()
         {
+            TopSpacer();
             int TechBooksAndArticlesNumberSelected;
             TopOfHeader();
             Console.ForegroundColor = ConsoleColor.Magenta;
@@ -218,29 +399,53 @@ namespace calender_app
             List<string> TechBooksAndArticles = new List<string>
             {
                 "New Book/Article",
+                " ",
                 "Back",
-                "Home"
+                " ",
+                "Home",
+                " ",
+                "Exit"
             };
             foreach (string Category in TechBooksAndArticles)
             {
-                Rainbow();
-                Console.Write("|");
-                CenterDate();
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.Write(NumberID + ": ");
-                Console.ForegroundColor = ConsoleColor.Blue;
-                Console.Write(Category);
-
-                NumberID += 1;
                 int characterlength = Category.Length;
-                do
+                if (Category.Length == 1)
                 {
-                    Console.Write(" ");
-                    characterlength += 1;
+                    SideSpacer();
+                    Rainbow();
+                    Console.Write("|");
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 65);
+                    Rainbow();
+                    Console.WriteLine("|");
                 }
-                while (characterlength < 34);
-                Rainbow();
-                Console.WriteLine("|");
+                else
+                {
+                    SideSpacer();
+                    Rainbow();
+                    Console.Write("|");
+                    CenterDate();
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.Write(NumberID + ": ");
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.Write(Category);
+
+                    NumberID += 1;
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 34);
+                    Rainbow();
+                    Console.WriteLine("|");
+                }
             }
         }
 
@@ -248,6 +453,7 @@ namespace calender_app
 
         public static int CasualReadingPage()
         {
+            TopSpacer();
             int CasualBooksAndArticlesNumberSelected;
             TopOfHeader();
             Console.ForegroundColor = ConsoleColor.Magenta;
@@ -266,35 +472,60 @@ namespace calender_app
             List<string> CasualReading = new List<string>
             {
                 "New Book/Article",
+                " ",
                 "Back",
-                "Home"
+                " ",
+                "Home",
+                " ",
+                "Exit"
             };
             foreach (string Category in CasualReading)
             {
-                Rainbow();
-                Console.Write("|");
-                CenterDate();
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.Write(NumberID + ": ");
-                Console.ForegroundColor = ConsoleColor.Blue;
-                Console.Write(Category);
-
-                NumberID += 1;
                 int characterlength = Category.Length;
-                do
+                if (Category.Length == 1)
                 {
-                    Console.Write(" ");
-                    characterlength += 1;
+                    SideSpacer();
+                    Rainbow();
+                    Console.Write("|");
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 65);
+                    Rainbow();
+                    Console.WriteLine("|");
                 }
-                while (characterlength < 34);
-                Rainbow();
-                Console.WriteLine("|");
+                else
+                {
+                    SideSpacer();
+                    Rainbow();
+                    Console.Write("|");
+                    CenterDate();
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.Write(NumberID + ": ");
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.Write(Category);
+
+                    NumberID += 1;
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 34);
+                    Rainbow();
+                    Console.WriteLine("|");
+                }
             }
         }
 
         //----------------------------------------------------------------------Tier 1 Vocab
         public static int VocabPage()
         {
+            TopSpacer();
             int VocabNumberSelected;
             TopOfHeader();
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -313,36 +544,64 @@ namespace calender_app
             List<string> Vocab = new List<string>
             {
                 "Tech Jargon",
+                " ",
                 "Syntax",
+                " ",
                 "English",
+                " ",
                 "Other Langueges",
-                "Back"
+                " ",
+                "Home",
+                " ",
+                "Exit"
             };
             foreach (string Category in Vocab)
             {
-                Rainbow();
-                Console.Write("|");
-                CenterDate();
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.Write(NumberID + ": ");
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.Write(Category);
-
-                NumberID += 1;
+                
                 int characterlength = Category.Length;
-                do
+                if (Category.Length == 1)
                 {
-                    Console.Write(" ");
-                    characterlength += 1;
+                    SideSpacer();
+                    Rainbow();
+                    Console.Write("|");
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 65);
+                    Rainbow();
+                    Console.WriteLine("|");
                 }
-                while (characterlength < 34);
-                Rainbow();
-                Console.WriteLine("|");
+                else
+                {
+                    SideSpacer();
+                    Rainbow();
+                    Console.Write("|");
+                    CenterDate();
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.Write(NumberID + ": ");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.Write(Category);
+
+                    NumberID += 1;
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 34);
+                    Rainbow();
+                    Console.WriteLine("|");
+                }
             }
         }
         //---------------------------------------------------------------------Tier 1 Exercise
         public static int ExercisePage()
         {
+            TopSpacer();
             int WorkoutNumberSelected;
             TopOfHeader();
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -361,37 +620,65 @@ namespace calender_app
             List<string> Workout = new List<string>
             {
                 "Running",
+                " ",
                 "Hiking",
+                " ",
                 "Pushups",
+                " ",
                 "Pullups",
+                " ",
                 "Gym",
-                "Back"
+                " ",
+                "Home",
+                " ",
+                "Exit"
             };
             foreach (string Category in Workout)
             {
-                Rainbow();
-                Console.Write("|");
-                CenterDate();
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.Write(NumberID + ": ");
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.Write(Category);
-
-                NumberID += 1;
                 int characterlength = Category.Length;
-                do
+                if (Category.Length == 1)
                 {
-                    Console.Write(" ");
-                    characterlength += 1;
+                    SideSpacer();
+                    Rainbow();
+                    Console.Write("|");
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 65);
+                    Rainbow();
+                    Console.WriteLine("|");
                 }
-                while (characterlength < 34);
-                Rainbow();
-                Console.WriteLine("|");
+                else
+                {
+                    SideSpacer();
+                    Rainbow();
+                    Console.Write("|");
+                    CenterDate();
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.Write(NumberID + ": ");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.Write(Category);
+
+                    NumberID += 1;
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 34);
+                    Rainbow();
+                    Console.WriteLine("|");
+                }
             }
         }
         //---------------------------------------------------------------------Tier 1 Work
         public static int WorkPage()
         {
+            TopSpacer();
             int WorkNumberSelected;
             TopOfHeader();
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -410,36 +697,63 @@ namespace calender_app
             List<string> Jobs = new List<string>
             {
                 "Waiter",
+                " ",
                 "Bartender",
+                " ",
                 "Runner",
+                " ",
                 "Intern at KC",
-                "Back"
+                " ",
+                "Home",
+                " ",
+                "Exit"
             };
             foreach (string Category in Jobs)
             {
-                Rainbow();
-                Console.Write("|");
-                CenterDate();
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.Write(NumberID + ": ");
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.Write(Category);
-
-                NumberID += 1;
                 int characterlength = Category.Length;
-                do
+                if (Category.Length == 1)
                 {
-                    Console.Write(" ");
-                    characterlength += 1;
+                    SideSpacer();
+                    Rainbow();
+                    Console.Write("|");
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 65);
+                    Rainbow();
+                    Console.WriteLine("|");
                 }
-                while (characterlength < 34);
-                Rainbow();
-                Console.WriteLine("|");
+                else
+                {
+                    SideSpacer();
+                    Rainbow();
+                    Console.Write("|");
+                    CenterDate();
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.Write(NumberID + ": ");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.Write(Category);
+
+                    NumberID += 1;
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 34);
+                    Rainbow();
+                    Console.WriteLine("|");
+                }
             }
         }
         //---------------------------------------------------------------------Tier 1 Stats
         public static int StatPage()
         {
+            TopSpacer();
             int StatNumberSelected;
             TopOfHeader();
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -458,33 +772,61 @@ namespace calender_app
             List<string> StatCategories = new List<string>
             {
                 "Breakdowns",
+                " ",
                 "Coding Projects",
+                " ",
                 "Reading Selection",
+                " ",
                 "Vocabulary Timespent",
+                " ",
                 "Type of Workout",
+                " ",
                 "Job",
-                "Back"
+                " ",
+                "Home",
+                " ",
+                "Exit"
             };
             foreach (string Category in StatCategories)
             {
-                Rainbow();
-                Console.Write("|");
-                CenterDate();
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.Write(NumberID + ": ");
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.Write(Category);
-
-                NumberID += 1;
                 int characterlength = Category.Length;
-                do
+                if (Category.Length == 1)
                 {
-                    Console.Write(" ");
-                    characterlength += 1;
+
+                    Rainbow();
+                    Console.Write("|");
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 65);
+                    Rainbow();
+                    Console.WriteLine("|");
                 }
-                while (characterlength < 34);
-                Rainbow();
-                Console.WriteLine("|");
+                else
+                {
+
+                    Rainbow();
+                    Console.Write("|");
+                    CenterDate();
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.Write(NumberID + ": ");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.Write(Category);
+
+                    NumberID += 1;
+
+                    do
+                    {
+                        Console.Write(" ");
+                        characterlength += 1;
+                    }
+                    while (characterlength < 34);
+                    Rainbow();
+                    Console.WriteLine("|");
+                }
             }
         }
         // ---------------------------------------------------------------------Functions
@@ -508,12 +850,14 @@ namespace calender_app
         {
             GetDate();
             Rainbow();
+            SideSpacer();
             Console.Write("|");
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write("----------------------------------------------------------------");
             Rainbow();
             Console.WriteLine("|");
             Rainbow();
+            SideSpacer();
             Console.Write("|");
             CenterDate();
         }
@@ -523,8 +867,10 @@ namespace calender_app
             CenterDate();
             Rainbow();
             Console.WriteLine("|");
-            Console.ForegroundColor = ConsoleColor.White;
+            SideSpacer();
+            Rainbow();
             Console.Write("|");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Write("----------------------------------------------------------------");
             Rainbow();
             Console.WriteLine("|");
@@ -606,6 +952,7 @@ namespace calender_app
         public static void TopndBottomBorder()
         {
             int RainbowClock = 0;
+            SideSpacer();
             do
             {
                 Rainbow();
@@ -614,6 +961,7 @@ namespace calender_app
             }
             while (RainbowClock < 66);
             Console.WriteLine("");
+            SideSpacer();
             Console.Write("|");
 
         }
@@ -621,6 +969,7 @@ namespace calender_app
         public static void BottomBorder()
         {
             int RainbowClock = 0;
+            SideSpacer();
             Console.Write("|");
             do
             {
@@ -631,6 +980,29 @@ namespace calender_app
             while (RainbowClock < 64);
             Rainbow();
             Console.WriteLine("|");
+        }
+
+        public static void TopSpacer()
+        {
+            int push = 0;
+            do
+            {
+                Console.WriteLine("");
+                push -= 1;
+            }
+            while (push > -5);
+
+        }
+
+        public static void SideSpacer()
+        {
+            int push = 0;
+            do
+            {
+                Console.Write(" ");
+                push -= 1;
+            }
+            while (push > -25);
         }
     }
 }
